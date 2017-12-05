@@ -19,7 +19,7 @@ public class CacheFileParser {
         if (cache.exists()) {
             if (cache.isFile() && cache.canRead() && cache.canWrite()) {
                 RandomAccessFile marker = new RandomAccessFile(cache, "rw");
-                System.out.println("缓存文件长度："+marker.length());
+                System.out.println("缓存文件内容:"+marker.readLine());
             } else {
                 throw new IOException("缓存文件异常或无权读写");
             }

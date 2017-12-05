@@ -6,3 +6,7 @@ dependencies {
     //引入本地module
     compile project(':data-queue')
 }
+
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}
